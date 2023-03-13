@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GROCERY WORLD</title>
+</head>
+<style>
+    body{background-color:lightsteelblue;}
+</style>
+<body>
+	<h1>GROCERY WORLD</h1>
+    
+    <h2>VILLAGE MARKET</h2>
+	
+	<div id="cart-items">
+		<!-- This is where the items in the cart will be displayed -->
+	</div>
+	
+	<h2>Available Items:</h2>
+	
+	<ul>
+		<!-- List of available items in the store -->
+		<li>D<button onclick="addToCart('D')">Add to Cart</button></li>
+    </br>
+		<li>E<button onclick="addToCart('E')">Add to Cart</button></li>
+    </br>
+		<li>F<button onclick="addToCart('F')">Add to Cart</button></li>
+	</ul>
+	
+	<script>
+		// Define an array to store the items in the cart
+		var cartItems = [];
+		
+		// Function to add an item to the cart
+		function addToCart(item) {
+			cartItems.push(item);
+			displayCart();
+		}
+		
+		// Function to display the contents of the cart
+		function displayCart() {
+			// Get the cart items div element
+			var cartDiv = document.getElementById("cart-items");
+			
+			// Clear the current contents of the cart
+			cartDiv.innerHTML = "";
+			
+			// Loop through the items in the cart and display them
+			for (var i = 0; i < cartItems.length; i++) {
+				var itemDiv = document.createElement("div");
+				itemDiv.innerHTML = cartItems[i];
+				cartDiv.appendChild(itemDiv);
+			}
+		}
+	</script>
+      <button onclick="location.href='conformation.html';">Shop Now</button>
+      <br>
+    <style>
+        .input-btn {
+        display: block;
+  
+        
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #262626;
+        color: #fff;
+        font-size: 18px
+        cursor  pointer;
+    }
+    </style>
+    <hr>
+	<a href="oe.html"><input class="input-btn" type="button" value="HOME"></a> 
+ 
+</body>
+</html>
